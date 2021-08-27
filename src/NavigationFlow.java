@@ -1,34 +1,14 @@
 import static io.restassured.RestAssured.given;
+import static org.testng.Assert.assertEquals;
 
-
-import org.json.*;
-import org.json.JSONException;
-import org.openqa.selenium.By;
+import org.apache.commons.lang3.StringUtils;
 //import com.google.gson. *;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.BeforeClass;
 
 import files.ReUsableMethods;
-
 import io.restassured.RestAssured;
-import io.restassured.internal.http.Status;
 import io.restassured.path.json.JsonPath;
-
-import static org.testng.Assert.assertEquals;
-
-import java.util.List;
-import java.util.concurrent.TimeUnit;
-
-import org.apache.commons.lang3.StringUtils;
-import org.hamcrest.core.SubstringMatcher;
-
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 public class NavigationFlow {
 	

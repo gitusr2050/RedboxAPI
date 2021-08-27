@@ -26,7 +26,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button class="button" id="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite</span>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,8 +39,8 @@
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" class="navigator-link" panel-name="suite-Default_suite">
-              <span class="suite-name border-passed">Default suite</span>
+            <a href="#" class="navigator-link" panel-name="suite-Failed_suite__Default_suite_">
+              <span class="suite-name border-failed">Failed suite [Default suite]</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -50,37 +50,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="test-xml-Default_suite">
-                    <span>testng-customsuite.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Failed_suite__Default_suite_">
+                    <span>testng-failed.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="testlist-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="testlist-Failed_suite__Default_suite_">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="group-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="group-Failed_suite__Default_suite_">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="times-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="times-Failed_suite__Default_suite_">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="reporter-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="reporter-Failed_suite__Default_suite_">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="ignored-methods-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Failed_suite__Default_suite_">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" class="navigator-link " panel-name="chronological-Default_suite">
+                  <a href="#" class="navigator-link " panel-name="chronological-Failed_suite__Default_suite_">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -93,26 +93,35 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Failed_suite__Default_suite_" class="hide-methods failed suite-Failed_suite__Default_suite_"> (hide)</a> <!-- hide-methods failed suite-Failed_suite__Default_suite_ -->
+                      <a href="#" panel-name="suite-Failed_suite__Default_suite_" class="show-methods failed suite-Failed_suite__Default_suite_"> (show)</a> <!-- show-methods failed suite-Failed_suite__Default_suite_ -->
+                    </span>
+                    <div class="method-list-content failed suite-Failed_suite__Default_suite_">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite__Default_suite_" title="searchMovieTest" hash-for-method="TC2_explore_MovieResults">TC2_explore_MovieResults</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Failed_suite__Default_suite_ -->
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
                     <span class="show-or-hide-methods passed">
-                      <a href="#" panel-name="suite-Default_suite" class="hide-methods passed suite-Default_suite"> (hide)</a> <!-- hide-methods passed suite-Default_suite -->
-                      <a href="#" panel-name="suite-Default_suite" class="show-methods passed suite-Default_suite"> (show)</a> <!-- show-methods passed suite-Default_suite -->
+                      <a href="#" panel-name="suite-Failed_suite__Default_suite_" class="hide-methods passed suite-Failed_suite__Default_suite_"> (hide)</a> <!-- hide-methods passed suite-Failed_suite__Default_suite_ -->
+                      <a href="#" panel-name="suite-Failed_suite__Default_suite_" class="show-methods passed suite-Failed_suite__Default_suite_"> (show)</a> <!-- show-methods passed suite-Failed_suite__Default_suite_ -->
                     </span>
-                    <div class="method-list-content passed suite-Default_suite">
+                    <div class="method-list-content passed suite-Failed_suite__Default_suite_">
                       <span>
                         <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="searchMovie" hash-for-method="explore_MovieResults">explore_MovieResults</a> <!-- method navigator-link -->
+                        <a href="#" class="method navigator-link" panel-name="suite-Failed_suite__Default_suite_" title="searchMovieTest" hash-for-method="TC1_search_Movie">TC1_search_Movie</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                      <span>
-                        <img width="3%" src="passed.png"/>
-                        <a href="#" class="method navigator-link" panel-name="suite-Default_suite" title="searchMovie" hash-for-method="search_Movie">search_Movie</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content passed suite-Default_suite -->
+                    </div> <!-- method-list-content passed suite-Failed_suite__Default_suite_ -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -123,76 +132,112 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-Default_suite" class="panel Default_suite">
-          <div class="suite-Default_suite-class-passed">
+        <div panel-name="suite-Failed_suite__Default_suite_" class="panel Failed_suite__Default_suite_">
+          <div class="suite-Failed_suite__Default_suite_-class-failed">
             <div class="main-panel-header rounded-window-top">
-              <img src="passed.png"/>
-              <span class="class-name">searchMovie</span>
+              <img src="failed.png"/>
+              <span class="class-name">searchMovieTest</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="explore_MovieResults">
-                  </a> <!-- explore_MovieResults -->
-                  <span class="method-name">explore_MovieResults</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="search_Movie">
-                  </a> <!-- search_Movie -->
-                  <span class="method-name">search_Movie</span>
+                  <a name="TC2_explore_MovieResults">
+                  </a> <!-- TC2_explore_MovieResults -->
+                  <span class="method-name">TC2_explore_MovieResults</span>
+                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=92.0.4515.159)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;MIFARDGOLLA-M2&apos;, ip: &apos;fe80:0:0:0:43e:45fc:410:25a7%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.16&apos;, java.version: &apos;1.8.0_181&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 92.0.4515.159, chrome: {chromedriverVersion: 92.0.4515.107 (87a818b10553..., userDataDir: /var/folders/4c/3mds6v5x2hz...}, goog:chromeOptions: {debuggerAddress: localhost:59181}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: MAC, platformName: MAC, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: e5177e8bbf63f6812d564ef92585fd23
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at PageObjMod.explore_MovieResults(PageObjMod.java:120)
+	at searchMovieTest.TC2_explore_MovieResults(searchMovieTest.java:71)
+	at java.util.ArrayList.forEach(ArrayList.java:1257)
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Default_suite-class-passed -->
-        </div> <!-- panel Default_suite -->
-        <div panel-name="test-xml-Default_suite" class="panel">
+          </div> <!-- suite-Failed_suite__Default_suite_-class-failed -->
+          <div class="suite-Failed_suite__Default_suite_-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">searchMovieTest</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="TC1_search_Movie">
+                  </a> <!-- TC1_search_Movie -->
+                  <span class="method-name">TC1_search_Movie</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Failed_suite__Default_suite_-class-passed -->
+        </div> <!-- panel Failed_suite__Default_suite_ -->
+        <div panel-name="test-xml-Failed_suite__Default_suite_" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">/private/var/folders/4c/3mds6v5x2hz_dk5w6yy82z24jhfjq4/T/testng-eclipse--40685159/testng-customsuite.xml</span>
+            <span class="header-content">/Users/dgolla/eclipse-workspace/2021Automation/RedboxAPIAug27/RedboxAPI/test-output/testng-failed.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Default suite&quot;&gt;
-  &lt;test thread-count=&quot;5&quot; verbose=&quot;2&quot; name=&quot;Default test&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Failed suite [Default suite]&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; name=&quot;Default test(failed)&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;searchMovie&quot;/&gt;
+      &lt;class name=&quot;searchMovieTest&quot;&gt;
+        &lt;methods&gt;
+          &lt;include name=&quot;TC2_explore_MovieResults&quot;/&gt;
+          &lt;include name=&quot;tearDown&quot;/&gt;
+          &lt;include name=&quot;TC1_search_Movie&quot;/&gt;
+          &lt;include name=&quot;setUp&quot;/&gt;
+          &lt;include name=&quot;catchExceptions&quot;/&gt;
+        &lt;/methods&gt;
+      &lt;/class&gt; &lt;!-- searchMovieTest --&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- Default test --&gt;
-&lt;/suite&gt; &lt;!-- Default suite --&gt;
+  &lt;/test&gt; &lt;!-- Default test(failed) --&gt;
+&lt;/suite&gt; &lt;!-- Failed suite [Default suite] --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-Default_suite" class="panel">
+        <div panel-name="testlist-Failed_suite__Default_suite_" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for Default suite</span>
+            <span class="header-content">Tests for Failed suite [Default suite]</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">Default test (1 class)</span>
+                <span class="test-name">Default test(failed) (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-Default_suite" class="panel">
+        <div panel-name="group-Failed_suite__Default_suite_" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for Default suite</span>
+            <span class="header-content">Groups for Failed suite [Default suite]</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-Default_suite" class="panel">
+        <div panel-name="times-Failed_suite__Default_suite_" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for Default suite</span>
+            <span class="header-content">Times for Failed suite [Default suite]</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_Default_suite');
-function tableData_Default_suite() {
+suiteTableInitFunctions.push('tableData_Failed_suite__Default_suite_');
+function tableData_Failed_suite__Default_suite_() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
@@ -200,68 +245,76 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'search_Movie')
-data.setCell(0, 2, 'searchMovie')
-data.setCell(0, 3, 13008);
+data.setCell(0, 1, 'TC2_explore_MovieResults')
+data.setCell(0, 2, 'searchMovieTest')
+data.setCell(0, 3, 21049);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'explore_MovieResults')
-data.setCell(1, 2, 'searchMovie')
-data.setCell(1, 3, 2764);
-window.suiteTableData['Default_suite']= { tableData: data, tableDiv: 'times-div-Default_suite'}
+data.setCell(1, 1, 'TC1_search_Movie')
+data.setCell(1, 2, 'searchMovieTest')
+data.setCell(1, 3, 11579);
+window.suiteTableData['Failed_suite__Default_suite_']= { tableData: data, tableDiv: 'times-div-Failed_suite__Default_suite_'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 15 seconds</span>
-              <div id="times-div-Default_suite">
-              </div> <!-- times-div-Default_suite -->
+              <span class="suite-total-time">Total running time: 32 seconds</span>
+              <div id="times-div-Failed_suite__Default_suite_">
+              </div> <!-- times-div-Failed_suite__Default_suite_ -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-Default_suite" class="panel">
+        <div panel-name="reporter-Failed_suite__Default_suite_" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for Default suite</span>
+            <span class="header-content">Reporter output for Failed suite [Default suite]</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="reporter-method-div">
-              <span class="reporter-method-name">explore_MovieResults</span>
-              <div class="reporter-method-output-div">
-                <span class="reporter-method-output">Search auto complete results and Explore list have same count of movies</span>
-              </div> <!-- reporter-method-output-div -->
-            </div> <!-- reporter-method-div -->
-            <div class="reporter-method-div">
-              <span class="reporter-method-name">search_Movie</span>
+              <span class="reporter-method-name">TC1_search_Movie</span>
               <div class="reporter-method-output-div">
                 <span class="reporter-method-output">Movie name is same</span>
               </div> <!-- reporter-method-output-div -->
             </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-Default_suite" class="panel">
+        <div panel-name="ignored-methods-Failed_suite__Default_suite_" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-Default_suite" class="panel">
+        <div panel-name="chronological-Failed_suite__Default_suite_" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">searchMovie</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">searchMovieTest</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">search_Movie</span>
-                <span class="method-start">8886 ms</span>
+                <span class="method-name">TC1_search_Movie</span>
+                <span class="method-start">18356 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">catchExceptions([TestResult name=TC1_search_Movie status=SUCCESS method=searchMovieTest.TC1_search_Movie()[pri:0, in...)</span>
+                <span class="method-start">29937 ms</span>
+              </div> <!-- configuration-method after -->
               <div class="test-method">
-                <span class="method-name">explore_MovieResults</span>
-                <span class="method-start">21902 ms</span>
+                <img src="failed.png">
+                </img>
+                <span class="method-name">TC2_explore_MovieResults</span>
+                <span class="method-start">29948 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-method after">
+                <span class="method-name">catchExceptions([TestResult name=TC2_explore_MovieResults status=FAILURE method=searchMovieTest.TC2_explore_MovieRes...)</span>
+                <span class="method-start">51000 ms</span>
+              </div> <!-- configuration-method after -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">53426 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->
