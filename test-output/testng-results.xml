@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Movie name is same]]>
@@ -8,79 +8,79 @@
       <![CDATA[Movie name is same]]>
     </line>
   </reporter-output>
-  <suite name="Suite1" duration-ms="38181" started-at="2021-08-29T00:49:59 EDT" finished-at="2021-08-29T00:50:37 EDT">
+  <suite started-at="2021-08-29T01:01:55 EDT" name="Suite1" finished-at="2021-08-29T01:02:35 EDT" duration-ms="39999">
     <groups>
     </groups>
-    <test name="exampletest1" duration-ms="12835" started-at="2021-08-29T00:49:59 EDT" finished-at="2021-08-29T00:50:12 EDT">
+    <test started-at="2021-08-29T01:01:55 EDT" name="exampletest1" finished-at="2021-08-29T01:02:10 EDT" duration-ms="15194">
       <class name="RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow@4da855dd]" name="setUp" is-config="true" duration-ms="4152" started-at="2021-08-29T00:49:59 EDT" finished-at="2021-08-29T00:50:03 EDT">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow@796065aa]" started-at="2021-08-29T01:01:55 EDT" name="setUp" finished-at="2021-08-29T01:02:00 EDT" duration-ms="4551" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="verifyMovieTitle()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow@4da855dd]" name="verifyMovieTitle" duration-ms="6959" started-at="2021-08-29T00:50:03 EDT" finished-at="2021-08-29T00:50:10 EDT">
+        <test-method signature="verifyMovieTitle()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow@796065aa]" started-at="2021-08-29T01:02:00 EDT" name="verifyMovieTitle" finished-at="2021-08-29T01:02:09 EDT" duration-ms="9000" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyMovieTitle -->
-        <test-method status="PASS" signature="catchExceptions(org.testng.ITestResult)[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow@4da855dd]" name="catchExceptions" is-config="true" duration-ms="8" started-at="2021-08-29T00:50:11 EDT" finished-at="2021-08-29T00:50:11 EDT">
+        <test-method is-config="true" signature="catchExceptions(org.testng.ITestResult)[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow@796065aa]" started-at="2021-08-29T01:02:09 EDT" name="catchExceptions" finished-at="2021-08-29T01:02:09 EDT" duration-ms="6" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyMovieTitle status=SUCCESS method=NavigationFlow.verifyMovieTitle()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow@4da855dd] output={null}]]]>
+                <![CDATA[[TestResult name=verifyMovieTitle status=SUCCESS method=NavigationFlow.verifyMovieTitle()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow@796065aa] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- catchExceptions -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow@4da855dd]" name="tearDown" is-config="true" duration-ms="1166" started-at="2021-08-29T00:50:11 EDT" finished-at="2021-08-29T00:50:12 EDT">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow@796065aa]" started-at="2021-08-29T01:02:10 EDT" name="tearDown" finished-at="2021-08-29T01:02:10 EDT" duration-ms="548" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow -->
     </test> <!-- exampletest1 -->
-    <test name="exampletest2" duration-ms="25302" started-at="2021-08-29T00:50:12 EDT" finished-at="2021-08-29T00:50:37 EDT">
+    <test started-at="2021-08-29T01:02:10 EDT" name="exampletest2" finished-at="2021-08-29T01:02:35 EDT" duration-ms="24711">
       <class name="RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@5f7f2382]" name="setUp" is-config="true" duration-ms="7330" started-at="2021-08-29T00:50:12 EDT" finished-at="2021-08-29T00:50:19 EDT">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@3bb8aabc]" started-at="2021-08-29T01:02:10 EDT" name="setUp" finished-at="2021-08-29T01:02:18 EDT" duration-ms="8033" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="TC1_searchMovie()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@5f7f2382]" name="TC1_searchMovie" duration-ms="12283" started-at="2021-08-29T00:50:19 EDT" finished-at="2021-08-29T00:50:32 EDT">
+        <test-method signature="TC1_searchMovie()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@3bb8aabc]" started-at="2021-08-29T01:02:18 EDT" name="TC1_searchMovie" finished-at="2021-08-29T01:02:32 EDT" duration-ms="13272" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Movie name is same]]>
             </line>
           </reporter-output>
         </test-method> <!-- TC1_searchMovie -->
-        <test-method status="PASS" signature="catchExceptions(org.testng.ITestResult)[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@5f7f2382]" name="catchExceptions" is-config="true" duration-ms="1" started-at="2021-08-29T00:50:32 EDT" finished-at="2021-08-29T00:50:32 EDT">
+        <test-method is-config="true" signature="catchExceptions(org.testng.ITestResult)[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@3bb8aabc]" started-at="2021-08-29T01:02:32 EDT" name="catchExceptions" finished-at="2021-08-29T01:02:32 EDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC1_searchMovie status=SUCCESS method=SearchMovieTest.TC1_searchMovie()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@5f7f2382] output=Movie name is same]]]>
+                <![CDATA[[TestResult name=TC1_searchMovie status=SUCCESS method=SearchMovieTest.TC1_searchMovie()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@3bb8aabc] output=Movie name is same]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- catchExceptions -->
-        <test-method status="PASS" signature="TC2_exploreMovieResults()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@5f7f2382]" name="TC2_exploreMovieResults" duration-ms="5338" started-at="2021-08-29T00:50:32 EDT" depends-on-methods="RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest.TC1_searchMovie" finished-at="2021-08-29T00:50:37 EDT">
+        <test-method signature="TC2_exploreMovieResults()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@3bb8aabc]" started-at="2021-08-29T01:02:32 EDT" name="TC2_exploreMovieResults" finished-at="2021-08-29T01:02:35 EDT" depends-on-methods="RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest.TC1_searchMovie" duration-ms="3102" status="PASS">
           <reporter-output>
             <line>
               <![CDATA[Movie name is same]]>
             </line>
           </reporter-output>
         </test-method> <!-- TC2_exploreMovieResults -->
-        <test-method status="PASS" signature="catchExceptions(org.testng.ITestResult)[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@5f7f2382]" name="catchExceptions" is-config="true" duration-ms="1" started-at="2021-08-29T00:50:37 EDT" finished-at="2021-08-29T00:50:37 EDT">
+        <test-method is-config="true" signature="catchExceptions(org.testng.ITestResult)[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@3bb8aabc]" started-at="2021-08-29T01:02:35 EDT" name="catchExceptions" finished-at="2021-08-29T01:02:35 EDT" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=TC2_exploreMovieResults status=SUCCESS method=SearchMovieTest.TC2_exploreMovieResults()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@5f7f2382] output=Movie name is same]]]>
+                <![CDATA[[TestResult name=TC2_exploreMovieResults status=SUCCESS method=SearchMovieTest.TC2_exploreMovieResults()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@3bb8aabc] output=Movie name is same]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- catchExceptions -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@5f7f2382]" name="tearDown" is-config="true" duration-ms="323" started-at="2021-08-29T00:50:37 EDT" finished-at="2021-08-29T00:50:37 EDT">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest@3bb8aabc]" started-at="2021-08-29T01:02:35 EDT" name="tearDown" finished-at="2021-08-29T01:02:35 EDT" duration-ms="277" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
