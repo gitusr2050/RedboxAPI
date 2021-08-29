@@ -45,7 +45,7 @@ public class NavigationFlow  {
 		options.addArguments("--disable-extensions");
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		System.out.println("hi");
+		
 
 
 	}
