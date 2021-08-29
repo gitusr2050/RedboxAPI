@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Default suite]]">
-  <test thread-count="5" name="Default test(failed)(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="searchMovieTest">
+      <class name="RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow">
         <methods>
-          <include name="TC2_explore_MovieResults"/>
-          <include name="tearDown"/>
-          <include name="TC1_search_Movie"/>
-          <include name="setUp"/>
+          <include name="verifyMovieTitle"/>
           <include name="catchExceptions"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- searchMovieTest -->
+      </class> <!-- RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow -->
     </classes>
-  </test> <!-- Default test(failed)(failed) -->
-</suite> <!-- Failed suite [Failed suite [Default suite]] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->
