@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">	
+<suite thread-count="1" verbose="1" name="Basic and Advanced Automation Suite" annotations="JDK" parallel="tests">
+ <test name="RedboxTest Classes">
+    
+     <classes>
+  
+          <class name="NavigationFlow"/>
+         <class name="SearchMovieTest"/>
+  
+         
+        
+     </classes>
+   </test>
+</suite>

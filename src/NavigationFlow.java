@@ -1,117 +1,138 @@
 import static io.restassured.RestAssured.given;
-import static org.testng.Assert.assertEquals;
-
-import org.apache.commons.lang3.StringUtils;
-//import com.google.gson. *;
-import org.openqa.selenium.WebDriver;
-import org.testng.annotations.BeforeClass;
 
 import files.ReUsableMethods;
+
 import io.restassured.RestAssured;
+
 import io.restassured.path.json.JsonPath;
 
-public class NavigationFlow {
-	
-	 WebDriver driver;
-	 
-	 @BeforeClass
-	 public void setUp()
-	 {
-		 
-		 
-		 
-	 }
-	
-	
-	public static void verify_MovieTitle()
+import static org.testng.Assert.assertEquals;
+
+import java.io.File;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+
+public class NavigationFlow  {
+
+	static WebDriver driver;
+
+	@BeforeClass
+	public void setUp()throws Exception
+
 	{
-		
+
+		System.setProperty("webdriver.chrome.driver", "chromedriver92");
+		ChromeOptions options = new ChromeOptions();
+		options.addArguments("--disable-extensions");
+		driver = new ChromeDriver();
+		driver.manage().window().maximize();
+
+
+	}
+
+
+	@Test
+
+	public static void verifyMovieTitle()
+	{
 
 		RestAssured.baseURI= "https://www.redbox.com";
-		
-	    String response = given().
-	     when().
-	     get("https://preprod.redbox.com/rbweb/api/product/js/__titles7").then().assertThat().statusCode(200) 
-	  
-	     .extract().response().asString();
-	   
-	  
-	   JsonPath js = ReUsableMethods.rawToJson(response);
-	   
-	   
-	  /* String movielist = js.getString("name[193]");
-	   
-	   System.out.println(movielist); 
-	   
-	   String selectedMovieUrl = js.getString("url[193]") ;
 
-		 System.out.println(selectedMovieUrl);
+		String response = given().when().get("https://preprod.redbox.com/rbweb/api/product/js/__titles7").then().assertThat().statusCode(200) 
 
-		 
-	String respString = given().log().all(). when().get("https://www.redbox.com/"+selectedMovieUrl).then().log().all().assertThat().statusCode(200).extract().response().asString() ;
-	
-	 System.out.println(respString); */
-	   
-	 
-	String[] moviename = js.getString("name").split(",") ;
-	  
-	  int moviecount = moviename.length;
-	    
-	   
-	   String[] movieurl= js.getString("url").split(",") ;
-	    
-	   int b = (int)(Math.random()*(moviecount-0)+0);
-	   
-		 System.out.println(b);
+				.extract().response().asString();
+
+		JsonPath js = ReUsableMethods.rawToJson(response);
 
 
-		  String selectedMovie = js.getString("name["+b+"]") ;
-		  
-		  
-		  
-		 System.out.println(selectedMovie);
-		 
-		  String selectedMovieUrl = js.getString("url["+b+"]") ;
+		String[] moviename = js.getString("name").split(",") ;
 
-			 System.out.println(selectedMovieUrl);
 
-			 
-		String respString = given().log().all(). when().get("https://www.redbox.com/"+selectedMovieUrl).then().log().all().assertThat().statusCode(200).extract().response().asString() ;
-		
-		 System.out.println(respString);
-		 
-		 
-		String title = StringUtils.substringBetween(respString, "<title>","</title>");
-		
-		
-		 System.out.println(title.substring(7).toUpperCase());
-		 
-		 
-		 System.out.println(selectedMovie.toUpperCase()); 
+		int moviecount = moviename.length;
 
-       assertEquals(title.substring(7).toUpperCase().equals(selectedMovie.toUpperCase()),true);
-       
-       
-	  System.out.println("Movie name is same"); 
-		
-		
-	}
-	
-	
-	
-	
 
-	public static void main(String[] args) {
-    
-		
-		//verify_MovieTitle();
-		
-		NavigationFlow flow = new NavigationFlow();
-		
-		
-     
-	  
+		String[] movieurl= js.getString("url").split(",") ;
+
+		int b = (int)(Math.random()*(moviecount-0)+0);
+
+		System.out.println(b);
+
+		String selectedMovie = js.getString("name["+b+"]") ;
+
+		System.out.println(selectedMovie);
+
+		String selectedMovieUrl = js.getString("url["+b+"]") ;
+
+		System.out.println(selectedMovieUrl);
+
+		//String respString = given().log().all(). when().get("https://www.redbox.com/"+selectedMovieUrl).then().log().all().assertThat().statusCode(200).extract().response().asString() ;
+
+		//System.out.println(respString);
+
+		driver.get("https://www.redbox.com/"+selectedMovieUrl) ;
+
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+
+		String title = driver.findElement(By.cssSelector("[data-test-id='title_detail-name']")).getText();
+
+
+		System.out.println(title.toUpperCase());
+
+
+		System.out.println(selectedMovie.toUpperCase()); 
+
+		assertEquals(title.toUpperCase().equals(selectedMovie.toUpperCase()),true);
+
+
+		System.out.println("Movie name is same"); 
 
 	}
+	
+	@AfterMethod(alwaysRun=true)
+	public void catchExceptions(ITestResult result)
+	{
+		Calendar calendar = Calendar.getInstance();
+		SimpleDateFormat formater = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss");
+		String methodName = result.getName();
+		if(!result.isSuccess())
+		{
+			File scrFile = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			try {
 
+				String reportDirectory = new File(System.getProperty("user.dir")).getAbsolutePath() + "/target/surefire-reports";
+				File destFile = new File((String) reportDirectory+"/failure_screenshots/"+methodName+"_"+formater.format(calendar.getTime())+".png");
+
+				FileUtils.copyFile(scrFile,destFile);
+			} 
+			catch (IOException e1) 
+			{
+				e1.printStackTrace();
+			}
+		}
 	}
+
+	@AfterClass
+	public void tearDown()
+
+	{
+
+		driver.close();
+	}
+
+}

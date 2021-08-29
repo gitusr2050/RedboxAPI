@@ -12,7 +12,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 
-public class PageObjMod {
+public class PageObjMod  {
 	
 	WebDriver driver;
 	
@@ -20,6 +20,7 @@ public class PageObjMod {
 	Boolean movieStatus;
 	Boolean exploreliststatus;
 	WebElement  searchBox;
+	
 	
 	String textToSelect;
 
@@ -43,7 +44,7 @@ public class PageObjMod {
 				
 		}
 		
-		public  boolean search_Movie()
+		public  boolean search_Movie(String movieName)
 		
 		{
 		
@@ -60,7 +61,7 @@ public class PageObjMod {
 			}
 
 			
-			searchBox.sendKeys("Wonder Woman 1984");
+			searchBox.sendKeys(movieName);
 			
 			try {
 				Thread.sleep(5000);
@@ -70,7 +71,7 @@ public class PageObjMod {
 			}
 			
 		
-			String textToSelect = "Wonder Woman 1984";
+			String textToSelect = movieName;
 
 		    List<WebElement> optionsToSelect = driver.findElements(searchinput);
 		    
@@ -134,6 +135,8 @@ public class PageObjMod {
 			
 			
 		}
+		
+		
 }
 
 
