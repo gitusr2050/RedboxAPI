@@ -3,14 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow">
+      <class name="RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest2">
         <methods>
-          <include name="verifyMovieTitle"/>
           <include name="catchExceptions"/>
+          <include name="TC1_searchMovie"/>
+          <include name="TC2_exploreMovieResults"/>
           <include name="tearDown"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- RedboxMavenProject.RedboxMavenProject.testscripts.NavigationFlow -->
+      </class> <!-- RedboxMavenProject.RedboxMavenProject.testscripts.SearchMovieTest2 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

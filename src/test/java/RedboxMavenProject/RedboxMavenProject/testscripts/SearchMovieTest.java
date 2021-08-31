@@ -1,4 +1,7 @@
+
+
 package RedboxMavenProject.RedboxMavenProject.testscripts;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -7,12 +10,14 @@ import java.util.Calendar;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
+import org.codehaus.groovy.util.StringUtil;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
 import org.testng.ITestResult;
 import org.testng.Reporter;
@@ -24,6 +29,7 @@ import org.testng.annotations.Test;
 
 public class SearchMovieTest 
 {
+	String browser=System.getProperty("browser","chrome");
 
 	WebDriver driver;
 	PageObjMod pom;
@@ -33,13 +39,28 @@ public class SearchMovieTest
 	public void setUp()throws InterruptedException, IOException
 	{
 
-		System.setProperty("webdriver.chrome.driver", "chromedriver92");
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--disable-extensions");
-		driver = new ChromeDriver();
+		if (browser.equals("chrome"))
+		{
+
+			System.setProperty("webdriver.chrome.driver", "chromedriver92");
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--disable-extensions");
+			driver = new ChromeDriver();
+
+		}
+		else if (browser.equals("firefox"))
+
+		{
+
+			System.setProperty("webdriver.gecko.driver", "geckodriver91");
+			driver = new FirefoxDriver();
+
+		}
+
+
+
 		driver.manage().window().maximize();
 		driver.get("https://www.redbox.com") ;
-
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		pom = new PageObjMod(driver);
 
@@ -106,4 +127,4 @@ public class SearchMovieTest
 
 	}
 
-}
+} 
